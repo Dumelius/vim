@@ -28,6 +28,9 @@ else
   endif
 endif
 
+set backupdir=~/.vim/backup/
+set undodir=~/.vim/undo/
+
 if &t_Co > 2 || has("gui_running")
   " Switch on highlighting the last used search pattern.
   set hlsearch
@@ -53,6 +56,7 @@ endif
 
 set nocompatible
 set backspace=indent,eol,start
+set history=200
 set ruler
 set showcmd
 set wildmenu
@@ -86,7 +90,7 @@ func! WordProcessorMode()
   set formatoptions=aw2tq
   set laststatus=0
   set foldcolumn=12
-  set nonumber
+  " set nonumber
   highlight! link FoldColumn Normal
   " setlocal spell spelllang=fi_fi
   " nnoremap \s eas<C-X><C-S>
@@ -99,7 +103,7 @@ func! CodeMode()
   set ruler
   set laststatus=1
   set foldcolumn=0
-  setlocal nospell
+  " setlocal nospell
 endfu
 com! Code call CodeMode()
 call CodeMode()
