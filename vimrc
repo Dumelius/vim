@@ -28,7 +28,7 @@ else
   endif
 endif
 
-set backupdir=~/.vim/backup/
+" set backupdir=~/.vim/backup/
 set undodir=~/.vim/undo/
 
 if &t_Co > 2 || has("gui_running")
