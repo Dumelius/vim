@@ -94,3 +94,5 @@ func! CodeMode()
 endfu
 com! Code call CodeMode()
 call CodeMode()
+
+" Koe.
